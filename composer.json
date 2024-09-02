@@ -1,0 +1,39 @@
+{
+    "name": "highliuk/reserve-with-google",
+    "version": "1.0.0",
+    "description": "Reserve with Google PHP SDK, to simplify the Appointments Redirect integration",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "reserve",
+        "appointments",
+        "redirect",
+        "merchant",
+        "google",
+        "rwg",
+        "php"
+    ],
+    "scripts": {
+        "build": "protoc --php_out=src main.proto"
+    },
+    "autoload": {
+        "psr-4": {
+            "HighLiuk\\Rwg\\": "src/",
+            "GPBMetadata\\": "src/GPBMetadata",
+            "Generated\\Rwg\\": "src/Generated/Rwg"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luca Di Fazio",
+            "email": "highliuk@gmail.com"
+        }
+    ],
+    "require": {
+        "google/protobuf": "^4.27"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.12",
+        "laravel/pint": "^1.17"
+    }
+}
